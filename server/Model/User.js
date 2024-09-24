@@ -25,6 +25,14 @@ const userSchema = new mongoose.Schema({
     city:{
         type: String,
     },
+     account_name:{
+        type: String,
+        default:"gcash holder"
+    },
+    account_no:{
+        type: String,
+        default: "799907788878"
+    },
 
     question:{
         type: String,
