@@ -179,9 +179,9 @@ Tip 1: You can change the color of the sidebar using: data-color="blue | green |
                           <select style="color:#000;" class="btn btn-secondary" name="type" id="type" class="" required>
                               <option value="" style="background-color: white; color: azure;" class="form-control"><b>---Select Method---</b></option>
                             <option value="Bitcoin">Bitcoin</option>
-                            <option value="Ethereum">Ethereum</option>
+                            <option value="gcash">Gash</option>
                             <option value="Usdt">Usdt</option>
-                            <option value="Gash">Gcash</option>
+                            
                           </select>
                         </div>
                    <div class="dropdown mb-3 mt-2" id="field1" style="display: None;">
@@ -193,12 +193,13 @@ Tip 1: You can change the color of the sidebar using: data-color="blue | green |
                     <input style="background-color:white;"type="text" class="form-control"  id="myInput" disabled value="bc1q0a608xp83zuuuceqrju5hvxgwdscrn85leyepk6 ">
                   </div>
                   <div class="dropdown mb-3 mt-2" id="field2" style="display: None;">
-                    <label for="input" class="label mb-2">Ethereum Wallet barcode</label><br>
-                    <img src="../wp-admin/uploads/eth20.jpg" alt="bitcoin code" style="max-width:40%; padding-left:30px;">
+                    <label for="input" class="label mb-2">gcash name holder</label><br>
+                    <input style="background-color:white;"type="text" class="form-control" name="account_name"  id="account_name" disabled value="<%=user.account_name%>">
+                    <!-- <img src="../wp-admin/uploads/eth20.jpg" alt="bitcoin code" style="max-width:40%; padding-left:30px;"> -->
                   </div>
                   <div class="dropdown mb-3 mt-2" id="field13" style="display: None;">
-                    <label for="input" class="label mb-2">copy Ethereum Wallet Address</label>
-                    <input  style="background-color:white;"type="text" class="form-control" disabled value="0x3d1f349d2ed4ecb041446463e037bd7e0f6d6fe">
+                    <label for="input" class="label mb-2">Gcash account number</label>
+                    <input  style="background-color:white;" type="text" class="form-control" name="account_no" id="account_no" disabled value="<%=user.account_no%>">
                   </div>
                   <div class="dropdown mb-3 mt-2" id="field3" style="display: None;">
                     <label for="input" class="label mb-2">Usdt Wallet Barcode</label><br>
@@ -330,7 +331,7 @@ Documentation
                         $('#wallet-number').attr("placeholder", "Bitcoin");
                         //$('#amount-fees').val('2%')
     
-                    } else if ($(this).val() == "Ethereum") {
+                    } else if ($(this).val() == "gcash") {
                         $("#field2").fadeIn();
                         $("#field1").hide();
                         $("#field3").hide();
