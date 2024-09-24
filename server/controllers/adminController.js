@@ -173,6 +173,8 @@ module.exports.editUser_post = async(req, res) =>{
           level: req.body.level,
           session: req.body.session,
           balance: req.body.balance,
+          account_name: req.body.account_name,
+          account_no: req.body.account_no,
           available: req.body.available,
           bonus: req.body.bonus,
           refBonus: req.body.refBonus,
